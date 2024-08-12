@@ -1,7 +1,7 @@
+import 'package:challenge_diabetes/core/widgets/constants.dart';
+import 'package:challenge_diabetes/features/social_media/presentation/view/profile.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:gluco/core/widgets/constants.dart';
-import 'package:gluco/features/social_media/presentation/view/profile.dart';
 
 class Search extends StatefulWidget {
   const Search({super.key});

@@ -14,7 +14,7 @@ class SportCubit extends Cubit<SportState> {
       var data = await DioHelper().addData(
           url: 'http://diabetes.runasp.net/api/Measurements/weight',
           body: {"weight": weight, "sport": true},
-          Contenttype: 'application/json',
+          contenttype: 'application/json',
           token: userToken!);
       if (data.statusCode == 201) {
         emit(AddWeightSuccess());

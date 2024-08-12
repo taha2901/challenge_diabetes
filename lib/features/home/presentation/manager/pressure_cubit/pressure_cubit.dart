@@ -25,7 +25,7 @@ class PressureCubit extends Cubit<PressureState> {
           "systolic_pressure": extraversion,
           "heart_rate": heart
         },
-        Contenttype: 'application/json',
+        contenttype: 'application/json',
         token: userToken!,
       );
       if (data.statusCode == 200) {

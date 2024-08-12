@@ -1,9 +1,9 @@
 import 'dart:typed_data';
 
+import 'package:challenge_diabetes/core/helper/cach.dart';
+import 'package:challenge_diabetes/features/social_media/data/post.dart';
+import 'package:challenge_diabetes/features/social_media/presentation/manager/services/storage.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:gluco/core/helper/cach.dart';
-import 'package:gluco/features/social_media/data/post.dart';
-import 'package:gluco/features/social_media/presentation/manager/services/storage.dart';
 import 'package:uuid/uuid.dart';
 
 class CloudMethods {

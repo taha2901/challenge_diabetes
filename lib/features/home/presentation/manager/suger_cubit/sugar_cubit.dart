@@ -56,7 +56,7 @@ class SugarCubit extends Cubit<Sugarstate> {
           "sugar_reading": sugarlevel,
           "measurement_date": mealname
         },
-        Contenttype: 'application/json',
+        contenttype: 'application/json',
         token: userToken!,
       );
 

@@ -75,10 +75,12 @@
 //   }
 // }
 
+
+
+import 'package:challenge_diabetes/core/helper/cach.dart';
+import 'package:challenge_diabetes/features/auth/data/auth.dart';
+import 'package:challenge_diabetes/features/social_media/data/user.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:gluco/core/helper/cach.dart';
-import 'package:gluco/features/auth/data/auth.dart';
-import 'package:gluco/features/social_media/data/user.dart';
 
 class FireAuthSocial {
   getUserDetails() async {
@@ -88,7 +90,7 @@ class FireAuthSocial {
     return UserModel.fromSnap(documentSnapshot);
   }
 
-  final FirebaseFirestore _firestore = FirebaseFirestore.instance;
+  final FirebaseFirestore firestore = FirebaseFirestore.instance;
   CollectionReference users =
       FirebaseFirestore.instance.collection("userSocial");
 
@@ -108,3 +110,6 @@ class FireAuthSocial {
     users.doc(userID).set(userModel.toJson());
   }
 }
+
+
+

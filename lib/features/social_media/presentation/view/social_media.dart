@@ -1,10 +1,10 @@
+import 'package:challenge_diabetes/core/widgets/constants.dart';
+import 'package:challenge_diabetes/features/chat/presentation/view/chat_home_screen.dart';
+import 'package:challenge_diabetes/features/social_media/presentation/view/add.dart';
+import 'package:challenge_diabetes/features/social_media/presentation/view/search.dart';
+import 'package:challenge_diabetes/features/social_media/presentation/view/widgets/post_card.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:gluco/core/widgets/constants.dart';
-import 'package:gluco/features/chat/presentation/view/chat_home_screen.dart';
-import 'package:gluco/features/social_media/presentation/view/add.dart';
-import 'package:gluco/features/social_media/presentation/view/search.dart';
-import 'package:gluco/features/social_media/presentation/view/widgets/post_card.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 class SocialMedia extends StatefulWidget {

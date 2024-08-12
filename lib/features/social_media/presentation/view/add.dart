@@ -1,12 +1,11 @@
 import 'dart:typed_data';
-
+import 'package:challenge_diabetes/core/widgets/constants.dart';
+import 'package:challenge_diabetes/core/widgets/picker.dart';
+import 'package:challenge_diabetes/features/social_media/data/user.dart';
+import 'package:challenge_diabetes/features/social_media/presentation/manager/provider/user_provider.dart';
+import 'package:challenge_diabetes/features/social_media/presentation/manager/services/cloud.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:gluco/core/widgets/constants.dart';
-import 'package:gluco/core/widgets/picker.dart';
-import 'package:gluco/features/social_media/data/user.dart';
-import 'package:gluco/features/social_media/presentation/manager/provider/user_provider.dart';
-import 'package:gluco/features/social_media/presentation/manager/services/cloud.dart';
 import 'package:provider/provider.dart';
 
 class AddPage extends StatefulWidget {

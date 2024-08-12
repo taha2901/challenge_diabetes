@@ -32,9 +32,9 @@ class DioHelper {
         queryParameters: query,
       );
     } on DioError catch (e) {
-      print('Error: ${e.response?.statusCode} - ${e.message}');
-      print('Response data: ${e.response?.data}');
-      throw e;
+      debugPrint('Error: ${e.response?.statusCode} - ${e.message}');
+      debugPrint('Response data: ${e.response?.data}');
+      rethrow;
     }
   }
 
@@ -64,7 +64,7 @@ class DioHelper {
       if (e.response != null) {
         debugPrint('Response data: ${e.response?.data}');
       }
-      throw e;
+      rethrow;
     }
   }
 
@@ -101,12 +101,12 @@ class DioHelper {
   Future<Response> addData(
       {required String url,
       required Map<String, dynamic> body,
-      required String Contenttype,
+      required String contenttype,
       required String token}) async {
     Response<dynamic> response;
 
     Options option = Options(
-      headers: {'Content-Type': Contenttype, 'Authorization': 'Bearer $token'},
+      headers: {'Content-Type': contenttype, 'Authorization': 'Bearer $token'},
       validateStatus: (status) => true,
     );
     try {
@@ -117,10 +117,10 @@ class DioHelper {
       );
       return response;
     } on DioException catch (e) {
-      throw e;
+      rethrow;
     } catch (e) {
-      debugPrint(e);
-      throw e;
+      debugPrint(e.toString());
+      rethrow;
     }
   }
 

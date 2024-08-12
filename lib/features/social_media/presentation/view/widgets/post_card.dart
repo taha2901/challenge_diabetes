@@ -1,12 +1,12 @@
+import 'package:challenge_diabetes/core/helper/cach.dart';
+import 'package:challenge_diabetes/core/widgets/constants.dart';
+import 'package:challenge_diabetes/features/social_media/data/user.dart';
+import 'package:challenge_diabetes/features/social_media/presentation/manager/provider/user_provider.dart';
+import 'package:challenge_diabetes/features/social_media/presentation/manager/services/cloud.dart';
+import 'package:challenge_diabetes/features/social_media/presentation/view/comment_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:gluco/core/helper/cach.dart';
-import 'package:gluco/core/widgets/constants.dart';
-import 'package:gluco/features/social_media/data/user.dart';
-import 'package:gluco/features/social_media/presentation/manager/provider/user_provider.dart';
-import 'package:gluco/features/social_media/presentation/manager/services/cloud.dart';
-import 'package:gluco/features/social_media/presentation/view/comment_screen.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
@@ -149,14 +149,14 @@ class _PostCardState extends State<PostCard> {
                     onPressed: () {
                       print(
                           'Current user id: ${ChachHelper.getData(key: 'id')}');
-                      print('Post user id: ${widget.item['uid']}');
+                      debugPrint('Post user id: ${widget.item['uid']}');
 
                       CloudMethods().deletePost(widget.item['postId']);
                     },
                     icon: const Icon(Icons.delete),
                   )
                 else
-                  Container(), // إضافة هذه السطر لتجنب الأخطاء
+                  Container(), 
               ],
             ),
           ],
