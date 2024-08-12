@@ -1,9 +1,9 @@
+import 'package:challenge_diabetes/core/helper/api.dart';
+import 'package:challenge_diabetes/core/widgets/network.dart';
+import 'package:challenge_diabetes/features/activities/data/pressurecheck.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../../core/helper/api.dart';
-import '../../../../../core/widgets/network.dart';
-import '../../../data/pressurecheck.dart';
 import 'presssure_check_states.dart';
 
 class PresssureCheckCubit extends Cubit<PresssureCheckStates> {

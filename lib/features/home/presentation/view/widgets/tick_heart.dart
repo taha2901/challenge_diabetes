@@ -1,7 +1,6 @@
 import 'package:challenge_diabetes/core/widgets/constants.dart';
 import 'package:challenge_diabetes/features/activities/presentation/manager/pressure_cubit/presssure_check_states.dart';
 import 'package:challenge_diabetes/features/activities/presentation/manager/pressure_cubit/pressure_check_cubit.dart';
-import 'package:challenge_diabetes/features/home/presentation/view/widgets/Heart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -35,12 +34,12 @@ class TicksOfHeart extends StatelessWidget {
 
           return GestureDetector(
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => const Heart(),
-                ),
-              );
+              // Navigator.push(
+              //   context,
+              //   MaterialPageRoute(
+              //     builder: (context) => const Heart(),
+              //   ),
+              // );
             },
             child: Container(
               // width: containerWidth,

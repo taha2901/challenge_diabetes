@@ -1,5 +1,3 @@
-
-
 import 'package:challenge_diabetes/core/helper/api.dart';
 import 'package:challenge_diabetes/core/helper/cach.dart';
 import 'package:challenge_diabetes/core/widgets/network.dart';
@@ -25,6 +23,7 @@ import 'package:challenge_diabetes/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
@@ -123,29 +122,27 @@ class Gluco extends StatelessWidget {
         ),
       ],
       child: MaterialApp(
-        // locale: const Locale('ar'),
-        // supportedLocales: const [
-        //   Locale('en'),
-        //   Locale('ar'),
-        // ],
-        // localizationsDelegates: const [
-        //   GlobalMaterialLocalizations.delegate,
-        //   GlobalWidgetsLocalizations.delegate,
-        //   GlobalCupertinoLocalizations.delegate,
-        // ],
-        // localeResolutionCallback: (locale, supportedLocales) {
-        //   for (var supportedLocale in supportedLocales) {
-        //     if (supportedLocale.languageCode == locale?.languageCode) {
-        //       return supportedLocale;
-        //     }
-        //   }
-        //   return supportedLocales.first;
-        // },
+        locale: const Locale('ar'),
+        supportedLocales: const [
+          Locale('en'),
+          Locale('ar'),
+        ],
+        localizationsDelegates: const [
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          GlobalCupertinoLocalizations.delegate,
+        ],
+        localeResolutionCallback: (locale, supportedLocales) {
+          for (var supportedLocale in supportedLocales) {
+            if (supportedLocale.languageCode == locale?.languageCode) {
+              return supportedLocale;
+            }
+          }
+          return supportedLocales.first;
+        },
         debugShowCheckedModeBanner: false,
         home: startWidget,
       ),
     );
   }
 }
-
-

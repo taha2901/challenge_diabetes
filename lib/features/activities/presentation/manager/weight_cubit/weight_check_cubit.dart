@@ -1,7 +1,8 @@
+import 'package:challenge_diabetes/core/helper/api.dart';
+import 'package:challenge_diabetes/core/widgets/network.dart';
+import 'package:challenge_diabetes/features/activities/data/Weightcheck.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../../core/helper/api.dart';
-import '../../../../../core/widgets/network.dart';
-import '../../../data/Weightcheck.dart';
 import 'weight_check_states.dart';
 
 class WeightCheckCubit extends Cubit<WeightCheckStates> {
@@ -23,13 +24,13 @@ class WeightCheckCubit extends Cubit<WeightCheckStates> {
         weightdata.add(Weightcheck.fromJson(data[i]));
       }
     }
-    print(weightdata);
+    debugPrint(weightdata.toString());
     if (weightdata.isNotEmpty) {
       for (int i = 0; i < weightdata.length; i++) {
         weight.add(weightdata[i].weight!);
       }
-      print(weight);
-      print('token in weight cubit $userToken');
+      debugPrint(weight.toString());
+      debugPrint('token in weight cubit $userToken');
       emit(HaveData(weight, weightdata));
     } else {
       emit(NothaveData());
