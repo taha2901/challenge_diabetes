@@ -16,7 +16,7 @@ class _MyBotState extends State<MyBot> {
   List<ChatMessage> allMessages = [];
 
   final OurUrl =
-      'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyAwY6frY4mjtrMWzMwTMSRiTgyyZSb7Iow';
+      'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=AIzaSyBROYhpNf5cdeHVCnAjEy-4PXfSWEiQjmI';
 
   final header = {
     'Content-Type': 'application/json',
