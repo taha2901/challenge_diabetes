@@ -1,4 +1,3 @@
-
 import 'package:challenge_diabetes/core/widgets/custom_button.dart';
 import 'package:challenge_diabetes/core/widgets/custom_show_toast.dart';
 import 'package:challenge_diabetes/core/widgets/custom_text_field.dart';
@@ -53,7 +52,6 @@ GlobalKey<FormState> valid=GlobalKey();
           padding: const EdgeInsets.only(top: 24),
           child: Column(
             children: [
-              // Textfieldnumber(Text2, Text3, weight),
               CustomTextField(
                 controller: weight,
                 suffixText: text2,
@@ -82,7 +80,7 @@ GlobalKey<FormState> valid=GlobalKey();
                   selectedActivity!
                   );
                    BlocProvider.of<WeightCheckCubit>(context).fetchweightdata(formattedDate);
-                  print(state);
+                  debugPrint(state.toString());
             }
             }
           ),
@@ -92,8 +90,7 @@ GlobalKey<FormState> valid=GlobalKey();
         },
         listener: (context, state) {
           if(state is AddWeightSuccess)
-          {
-            
+          {  
            showToast(msg: "added", state: ToastStates.SUCCESS);
           }
           else if(state is AddWeightError)
@@ -119,7 +116,7 @@ GlobalKey<FormState> valid=GlobalKey();
                         double value = entry.value.toDouble();
                         return FlSpot(index.toDouble(), value);
                       }).toList();
-                      print(spots);
+                      debugPrint(spots.toString());
                     return Column(
                         children: [
                           SizedBox(

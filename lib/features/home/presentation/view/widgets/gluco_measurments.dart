@@ -17,7 +17,7 @@ class _MyAppState extends State<GlucoseMeasurement> {
   Color _color3 = Colors.grey;
   int? index = 2;
   List<bool> selecteditem = [false, false, false];
-  List Design = [
+  List design = [
     const PartScreenSuger("mg/dl", "قياس السكر"),
     PartScreenWeight("Kg", "قياس الوزن"),
     PartScreenPressure(
@@ -25,11 +25,11 @@ class _MyAppState extends State<GlucoseMeasurement> {
   ];
   Widget uiDesign() {
     if (index == 0) {
-      return Design[2];
+      return design[2];
     } else if (index == 1) {
-      return Design[1];
+      return design[1];
     } else {
-      return Design[0];
+      return design[0];
     }
   }
 
@@ -43,21 +43,18 @@ class _MyAppState extends State<GlucoseMeasurement> {
     }
   }
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.primary,
         centerTitle: true,
         title: appBarTitle(),
       ),
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
+        padding:  EdgeInsets.symmetric(horizontal: MediaQuery.of(context).size.width * 0.05,),
         child: CustomScrollView(
           slivers: [
-            SliverToBoxAdapter(child: MyDatePickerScreen()),
-             SliverToBoxAdapter(
+            SliverToBoxAdapter(
                 child: SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
             )),
@@ -69,14 +66,13 @@ class _MyAppState extends State<GlucoseMeasurement> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
-                      width: 55,
-                      height: 55,
+                      width: MediaQuery.of(context).size.width * 0.14,
+                      height: MediaQuery.of(context).size.width * 0.14,
                       decoration: BoxDecoration(
                         color: _color1,
                         borderRadius: BorderRadius.circular(40),
                       ),
                       child: IconButton(
-                       
                           onPressed: () {
                             index = 0;
                             _toggleColor(1);
@@ -87,14 +83,19 @@ class _MyAppState extends State<GlucoseMeasurement> {
                             color: Colors.white,
                           )),
                     ),
-                    const Text("قياس الضغط")
+                    Text(
+                      "قياس الضغط",
+                      style: TextStyle(
+                        fontSize: MediaQuery.of(context).size.width * 0.04,
+                      ),
+                    )
                   ],
                 ),
                 Column(
                   children: [
                     Container(
-                      width: 55,
-                      height: 55,
+                      width: MediaQuery.of(context).size.width * 0.14,
+                      height: MediaQuery.of(context).size.width * 0.14,
                       decoration: BoxDecoration(
                         color: _color2,
                         borderRadius: BorderRadius.circular(40),
@@ -110,14 +111,19 @@ class _MyAppState extends State<GlucoseMeasurement> {
                             color: Colors.white,
                           )),
                     ),
-                    const Text("وزن")
+                    Text(
+                      "وزن",
+                      style: TextStyle(
+                        fontSize: MediaQuery.of(context).size.width * 0.04,
+                      ),
+                    )
                   ],
                 ),
                 Column(
                   children: [
                     Container(
-                      width: 55,
-                      height: 55,
+                      width: MediaQuery.of(context).size.width * 0.14,
+                      height: MediaQuery.of(context).size.width * 0.14,
                       decoration: BoxDecoration(
                         color: _color3,
                         borderRadius: BorderRadius.circular(40),
@@ -133,7 +139,12 @@ class _MyAppState extends State<GlucoseMeasurement> {
                             color: Colors.white,
                           )),
                     ),
-                    const Text("قياس السكر")
+                    Text(
+                      "قياس السكر",
+                      style: TextStyle(
+                        fontSize: MediaQuery.of(context).size.width * 0.04,
+                      ),
+                    )
                   ],
                 ),
               ],

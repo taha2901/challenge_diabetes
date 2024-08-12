@@ -83,10 +83,9 @@ class ProfileScreen extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 20),
-                    // عرض نموذج تعديل الملف الشخصي
                     const FormProfile(),
                     if (state is ProfileLoaded)
-                      const CircularProgressIndicator(), // عرض مؤشر التحميل إذا كانت البيانات لا تزال قيد التحميل
+                      const CircularProgressIndicator(),
                   ],
                 ),
               ),

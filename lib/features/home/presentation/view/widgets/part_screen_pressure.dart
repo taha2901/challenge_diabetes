@@ -67,11 +67,8 @@ class PartScreenPressure extends StatelessWidget {
                         hint: text4,
                         controller: contractController,
                       ),
-                      const SizedBox(
-                        height: 16,
-                      ),
-                      const SizedBox(
-                        height: 16,
+                      SizedBox(
+                        height: MediaQuery.of(context).size.width * 0.03,
                       ),
                       CustomTextField(
                         inputType: TextInputType.number,
@@ -79,8 +76,8 @@ class PartScreenPressure extends StatelessWidget {
                         hint: text5,
                         controller: extraversionController,
                       ),
-                      const SizedBox(
-                        height: 16,
+                      SizedBox(
+                        height: MediaQuery.of(context).size.width * 0.03,
                       ),
                       CustomTextField(
                         inputType: TextInputType.number,
@@ -88,15 +85,12 @@ class PartScreenPressure extends StatelessWidget {
                         hint: text6,
                         controller: heartController,
                       ),
-                      const SizedBox(
-                        height: 16,
-                      ),
                     ],
                   ),
                 ),
               ),
-              const SizedBox(
-                height: 16,
+              SizedBox(
+                height: MediaQuery.of(context).size.width * 0.03,
               ),
               GestureDetector(
                 onTap: () async {
